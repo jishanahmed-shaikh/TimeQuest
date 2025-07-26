@@ -24,9 +24,17 @@ class AudioManager {
 
       this.currentAudio = new Audio(`/sounds/${audioFile}`);
       this.currentAudio.volume = volume;
-      this.currentAudio.play().catch(console.error);
+      
+      // Handle missing audio files gracefully
+      this.currentAudio.onerror = () => {
+        console.warn(`Audio file not found: ${audioFile}. Audio is optional and the app will work without it.`);
+      };
+      
+      this.currentAudio.play().catch((error) => {
+        console.warn(`Could not play audio: ${audioFile}. This is normal if audio files are not available.`);
+      });
     } catch (error) {
-      console.error('Error playing one-time audio:', error);
+      console.warn('Audio not available, continuing without sound:', error);
     }
   }
 
@@ -41,9 +49,19 @@ class AudioManager {
       this.timerAudio.loop = true;
       this.isTimerRunning = true;
       
-      this.timerAudio.play().catch(console.error);
+      // Handle missing audio files gracefully
+      this.timerAudio.onerror = () => {
+        console.warn(`Timer audio file not found: ${audioFile}. Timer will work silently.`);
+        this.isTimerRunning = true; // Keep timer running, just without sound
+      };
+      
+      this.timerAudio.play().catch((error) => {
+        console.warn(`Could not play timer audio: ${audioFile}. Timer will work silently.`);
+        this.isTimerRunning = true; // Keep timer running, just without sound
+      });
     } catch (error) {
-      console.error('Error starting timer audio:', error);
+      console.warn('Timer audio not available, timer will work silently:', error);
+      this.isTimerRunning = true; // Keep timer running, just without sound
     }
   }
 

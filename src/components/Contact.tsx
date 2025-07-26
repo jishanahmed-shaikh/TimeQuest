@@ -6,11 +6,11 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useToast } from '@/hooks/use-toast';
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Send, 
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Send,
   MessageCircle,
   Bug,
   Lightbulb,
@@ -48,9 +48,9 @@ const Contact = () => {
   ];
 
   const socialLinks = [
-    { name: 'GitHub', icon: Github, url: 'https://github.com/jishanahmed-shaikh/timequest' },
+    { name: 'GitHub', icon: Github, url: 'https://github.com/jishanahmed-shaikh/TimeQuest-DevPost' },
     { name: 'Twitter', icon: Twitter, url: 'https://www.x.com/jishanarshaikh' },
-    { name: 'Website', icon: Globe, url: 'https://timequest.vercel.app' }
+    { name: 'Website', icon: Globe, url: 'https://timequest-mauve.vercel.app/' }
   ];
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -58,14 +58,14 @@ const Contact = () => {
     if (!formData.name || !formData.email || !formData.message) return;
 
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     setTimeout(() => {
       toast({
         title: "Message Sent!",
         description: "Thanks for reaching out! We'll get back to you within 24 hours.",
       });
-      
+
       setFormData({
         name: '',
         email: '',
@@ -73,7 +73,7 @@ const Contact = () => {
         category: '',
         message: ''
       });
-      
+
       setIsSubmitting(false);
     }, 1500);
   };
