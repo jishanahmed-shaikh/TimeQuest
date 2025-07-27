@@ -444,10 +444,9 @@ npm run build
 
 ### **Deployment Options**
 
-1. **Lovable Platform**: One-click deployment
-2. **Vercel**: Connect GitHub repository
-3. **Netlify**: Drag and drop build folder
-4. **Custom Server**: Upload dist folder
+1. **Vercel**: Connect GitHub repository
+2. **Netlify**: Drag and drop build folder
+3. **Custom Server**: Upload dist folder
 
 ### **Environment Variables**
 
@@ -474,15 +473,8 @@ No environment variables required for basic functionality.
 
 ---
 
-## 📝 License
-
-This project is built with [Lovable](https://lovable.dev) and follows their terms of service.
-
----
-
 ## 🙏 Acknowledgments
 
-- **Lovable Platform** - For the amazing development experience
 - **shadcn/ui** - For the beautiful component library
 - **Radix UI** - For accessible UI primitives
 - **Tailwind CSS** - For the utility-first styling approach
