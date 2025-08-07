@@ -1,4 +1,7 @@
+<div align="center">
+
 # 🎮 TimeQuest - Gamified Productivity App
+</div>
 
 <div align="center">
   <img src="public/logotr.png" alt="TimeQuest Logo" width="120" height="120">
