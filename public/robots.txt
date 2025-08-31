@@ -1,3 +1,16 @@
+# TimeQuest - Gamified Productivity App
+# https://timequest-mauve.vercel.app/
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://timequest-mauve.vercel.app/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Specific bot permissions
 User-agent: Googlebot
 Allow: /
 
@@ -10,5 +23,8 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: *
-Allow: /
+# Disallow common non-content paths
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+Disallow: /private/
