@@ -167,8 +167,8 @@ timequest/
 
 ### Prerequisites
 
-- **Node.js** (v16 or higher)
-- **npm** or **yarn**
+- **Node.js** (v18 or higher recommended)
+- **npm**, **yarn**, or **bun**
 
 ### Installation
 
@@ -178,27 +178,36 @@ timequest/
    git clone <YOUR_GIT_URL>
    cd timequest
    ```
+
 2. **Install dependencies**
 
    ```bash
+   # Using npm
    npm install
+   
+   # Using yarn
+   yarn install
+   
+   # Using bun (fastest)
+   bun install
    ```
-3. **Add audio files** (Optional)
+
+3. **Start development server**
 
    ```bash
-   # Add audio files to public/sounds/
-   # See public/sounds/README.md for file requirements
-   ```
-4. **Start development server**
-
-   ```bash
+   # Using npm
    npm run dev
+   
+   # Using yarn
+   yarn dev
+   
+   # Using bun
+   bun dev
    ```
-5. **Open your browser**
 
-   ```
-   http://localhost:5173
-   ```
+4. **Open your browser**
+
+   The app will automatically open at `http://localhost:8080`
 
 ### Build for Production
 
@@ -206,9 +215,26 @@ timequest/
 # Build the application
 npm run build
 
-# Preview the build
+# Preview the build locally
 npm run preview
+
+# Type checking
+npm run type-check
+
+# Lint and fix code
+npm run lint:fix
 ```
+
+### Development Scripts
+
+- `npm run dev` - Start development server with hot reload
+- `npm run build` - Build for production
+- `npm run build:dev` - Build in development mode
+- `npm run preview` - Preview production build locally
+- `npm run lint` - Run ESLint
+- `npm run lint:fix` - Run ESLint with auto-fix
+- `npm run type-check` - Run TypeScript type checking
+- `npm run clean` - Clean build artifacts and cache
 
 ---
 
