@@ -240,8 +240,7 @@
     opacity: 0.3;
   }
 }
-/* E
-nhanced Retro Components & Effects */
+/* Enhanced Retro Components & Effects */
 @layer components {
   /* Textured Black Background with Retro Pattern */
   .bg-textured-retro {
@@ -496,13 +495,7 @@ nhanced Retro Components & Effects */
     background-clip: text;
   }
 
-  /* Enhanced Body Styling */
-  body {
-    font-family: 'Inter', sans-serif;
-    background: var(--gradient-textured-black);
-    background-attachment: fixed;
-    min-height: 100vh;
-  }
+  /* Enhanced Body Styling - Removed duplicate as it's already defined above */
 
   /* Scrollbar Styling */
   ::-webkit-scrollbar {
